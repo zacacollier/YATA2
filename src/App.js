@@ -1,11 +1,15 @@
 // @flow
 import React from 'react';
 import { connect } from 'react-redux';
+import * as A from './actions';
 import './App.css';
 
 const App = ({
   start,
   startTimer, stopTimer,
+} : {
+  start: string,
+  startTimer: Function, stopTimer: Function,
 }) =>
   <div className="App">
     <div className="App-header">
@@ -19,8 +23,8 @@ export default connect(
   state => ({
     start: state.start
   }),
-  dispatch => ({
-    startTimer: () => dispatch({ type: 'timer/START' }),
-    stopTimer: () => dispatch({ type: 'timer/STOP' }),
-  })
+  {
+    startTimer: A.startTimer,
+    stopTimer: A.stopTimer,
+  }
 )(App)
