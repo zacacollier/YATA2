@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { mount, shallow } from 'enzyme';
 
-import ConnectApp, { App } from './App';
-import ConnectTimer, { Timer } from './Timer';
-import store from './store';
-
-jest.mock("./index.js", () => "root");
+import ConnectApp, { App } from '../App';
+import ConnectTimer, { Timer } from '../Timer';
+import store from '../store';
 
 function setup() {
   const state = store.getState();
