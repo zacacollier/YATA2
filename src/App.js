@@ -3,7 +3,7 @@ import React from 'react';
 import Timer from './Timer';
 import './App.css';
 
-const App = () =>
+export const App = () =>
   <div className="App">
     <Timer />
   </div>

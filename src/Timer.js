@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as A from './actions';
 
-const Timer = ({
+export const Timer = ({
   start,
   startTimer, stopTimer,
 } : {
