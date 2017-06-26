@@ -29,7 +29,7 @@ const reducers = (state: State = initialState, action: Object): State => {
 }
 
 const withMiddleware = applyMiddleware(logger, createEpicMiddleware(rootEpic));
-const store = createStore(
+export const store = createStore(
   reducers,
   withMiddleware
 )
